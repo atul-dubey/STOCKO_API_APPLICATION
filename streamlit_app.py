@@ -5,8 +5,8 @@ import os
 import time
 import pandas as pd
 # sys.path.append(os.path.dirname(__file__), ".."))
-root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(root_dir)
+# root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# sys.path.append(root_dir)
 from backend.mongodb_connect import db
 from dotenv import load_dotenv
 from backend.ws_recorder import start_recording, stop_recording, shared_conn 
