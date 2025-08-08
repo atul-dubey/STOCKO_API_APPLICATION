@@ -48,3 +48,5 @@ urllib3==1.26.18
 watchdog==6.0.0
 websocket-client==1.6.1
 Werkzeug==2.2.3
+./backend
+./pyoauthbridge
