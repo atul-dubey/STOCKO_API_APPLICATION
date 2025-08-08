@@ -4,7 +4,7 @@ import sys
 import os
 import time
 import pandas as pd
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from backend.mongodb_connect import db
 from dotenv import load_dotenv
 from backend.ws_recorder import start_recording, stop_recording, shared_conn 
