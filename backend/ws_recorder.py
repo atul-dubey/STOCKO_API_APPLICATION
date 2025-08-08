@@ -8,11 +8,11 @@ from datetime import datetime
 from dotenv import load_dotenv
 from backend.ticker_resolver import resolve_ticker
 from backend.exchange_constants import get_exchange_name, get_multiplier
-from pyoauthbridge.pyoauthbridge.connect import Connect
-from pyoauthbridge.pyoauthbridge.wsclient import is_socket_open
+from pyoauthbridge.connect import Connect
+from pyoauthbridge.wsclient import is_socket_open
 from backend.db_utils import insert_tick_data
 from backend.csv_utils import initialize_csv, save_tick_in_csv
-from pyoauthbridge.pyoauthbridge.wsclient import subscribe_ticker, unsubscribe_ticker
+from pyoauthbridge.wsclient import subscribe_ticker, unsubscribe_ticker
 
 
 load_dotenv()

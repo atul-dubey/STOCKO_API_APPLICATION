@@ -4,13 +4,10 @@ import sys
 import os
 import time
 import pandas as pd
-# sys.path.append(os.path.dirname(__file__), ".."))
-# root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# sys.path.append(root_dir)
 from backend.mongodb_connect import db
 from dotenv import load_dotenv
 from backend.ws_recorder import start_recording, stop_recording, shared_conn 
-from pyoauthbridge.pyoauthbridge.wsclient import is_socket_open
+from pyoauthbridge.wsclient import is_socket_open
 from backend.token_utils import is_token_valid
 
 load_dotenv()
@@ -40,7 +37,7 @@ if not st.session_state.token_validated:
         if submitted:
             if not token_input.strip():
                 st.warning("Access token is required.")
-            elif is_token_valid(BASE_URL, token_input.strip()):
+            elif is_token_valid(BASE_URL, token_input.strip())[0]:
                 st.success("✅ Token is valid.")
                 st.session_state.access_token = token_input.strip()
                 st.session_state.token_validated = True
@@ -51,6 +48,7 @@ if not st.session_state.token_validated:
                     shared_conn.run_socket()
                     time.sleep(1)
             else:
+                
                 st.error("❌ Invalid token. Please try again.")
                 st.text("Token validation failed. Please check if the token is expired or incorrect.")
 
@@ -150,7 +148,7 @@ if st.session_state.token_validated:
         col1, col2 = st.columns([2, 2])
 
         # Record limit
-        limit = col1.slider("🎚️ Number of records to load", min_value=10, max_value=1000, value=100, step=10)
+        limit = col1.slider("🎚️ Number of records to load", min_value=1, max_value=30000, value=100, step=10)
 
         # Date filter
         date_filter = col2.date_input("📅 Filter by Date (optional)")
