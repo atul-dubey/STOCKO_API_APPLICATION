@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 from backend.ws_recorder import start_recording, stop_recording, shared_conn 
 from pyoauthbridge.wsclient import is_socket_open
 from backend.token_utils import is_token_valid
+# -e git+https://github.com/prachi07042004/STOCKO_API_APPLICATION.git@4dc3a06e885700fe37d8c393e98a9b389d2eb403#egg=pyoauthbridge&subdirectory=pyoauthbridge
 
 load_dotenv()
 

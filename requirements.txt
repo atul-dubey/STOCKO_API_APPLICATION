@@ -27,7 +27,7 @@ protobuf==6.31.1
 pyarrow==21.0.0
 pydeck==0.9.1
 pymongo==4.13.2
--e git+https://github.com/prachi07042004/STOCKO_API_APPLICATION.git@4dc3a06e885700fe37d8c393e98a9b389d2eb403#egg=pyoauthbridge&subdirectory=pyoauthbridge
+
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.1
 pytz==2025.2
