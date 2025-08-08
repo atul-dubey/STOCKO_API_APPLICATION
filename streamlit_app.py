@@ -7,6 +7,8 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "backend")))
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "pyoauthbridge")))
 import time
+import backend
+import pyoauthbridge
 import pandas as pd
 from backend.mongodb_connect import db
 from dotenv import load_dotenv
