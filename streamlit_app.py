@@ -3,12 +3,13 @@
 import streamlit as st
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "backend", "ws_recorder")))
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "pyoauthbridge", "connect")))
+# sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "backend", "ws_recorder")))
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "pyoauthbridge", "connect")))
 import time
-import backend
-import pyoauthbridge
+# import backend
+# import pyoauthbridge
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 import pandas as pd
 from backend.mongodb_connect import db
 from dotenv import load_dotenv

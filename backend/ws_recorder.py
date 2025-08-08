@@ -6,7 +6,6 @@ import queue
 import sys
 import threading
 from datetime import datetime
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "pyoauthbridge", "connect")))
 from dotenv import load_dotenv
 from backend.ticker_resolver import resolve_ticker
 from backend.exchange_constants import get_exchange_name, get_multiplier
